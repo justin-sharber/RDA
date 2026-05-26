@@ -163,23 +163,5 @@ This project demonstrates a completely different dimension of data science: **al
 ## Repository Contents
 - Executive Report, **[Is It Possible to Satisfy the RDA?](RDA_data_report.pdf)**  This report details the methodology and results of the project.
 
-- A **[Companion Jupyter Notebook](https://github.com/JShibby/RDA/blob/master/code/RDA_Jupyter.ipynb)**.  The notebook represents an abridged presentation of the project, and allows the user to review the information in more detail.  
-
+- A **[Jupyter Notebook](https://github.com/JShibby/RDA/blob/master/code/RDA_Jupyter.ipynb)**.  The notebook represents an abridged presentation of the project, and allows the user to review the information in more detail.  
 - **Project codebase.**
-
-### The Code
-The code includes the following files, which may be treated as having a linear order, as later notebooks have some dependencies on earlier ones.
-1. **data.py** - Imports and processes the data.  Creates these objects:
-    * `df` - Pandas Dataframe of foods and nutrients.
-    * `rda` - Pandas Series of nutrient RDA.
-    * `food_finder()` - Helps the user locate a food by name in the dataframe.
-    * `recal_df()` - Adjusts the dataframe to a new serving size, either in grams or calories.
-
-2. **explore_functions.py** - Creates food analysis function for visualizing nutrients.
-    * `analyze_food()` - Plots a foods top nutrients, and returns a sorted list of the nutrients it contains.
-                                 
-5. **Gut.py** - Creates the `Gut` class.  Tests satisfiability and constructs an ideal diet.
-
-6. **RandomGut.py** - `RandomGut` is a subclass of `Gut` that chooses foods from food groups randomly, according to dietary plan.
-
-7. **sim RandomGut.py** - Tests the MyPlate dietary recommendations by simulating `RandomGut` multiple times and aggregating results.

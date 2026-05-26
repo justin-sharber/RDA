@@ -164,5 +164,5 @@ This project demonstrates a completely different dimension of data science: **al
 - Executive Report, **[Is It Possible to Satisfy the RDA?](RDA_data_report.pdf)**  This report details the methodology and results of the project.
 
 - A rough companion **[Jupyter Notebook](https://github.com/JShibby/RDA/blob/master/code/RDA_Jupyter.ipynb)**.  The notebook represents an abridged presentation of the project, and allows the user to review the information in more detail.
-- 
+
 - **Project codebase.**

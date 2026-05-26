@@ -101,7 +101,10 @@ The `Gut` class defines a few core methods that run on a loop until satisfaction
 
 In addition, it determines a number of auxiliary functions for retrieving data and plotting results.  The object stores the history of food servings added, so the total nutritional progress can be plotted:
 
-> nutritional progress png
+<img alt="det-gut-nutrient-sample" src="https://github.com/user-attachments/assets/137a1cb1-405b-48f0-95f6-e9635fe63545" />
+
+*Growth of sampled nutrients in deterministic algorithm.*
+
 
 ### `RandomGut`: The Stochastic Person Simulator
 While the mathematical optimizer is highly efficient, humans do not eat via dynamic linear programming. To test real-world behavior, the `RandomGut` class models a stochastic simulation of the official USDA MyPlate guidelines.  
@@ -112,6 +115,9 @@ The 136 curated foods are mapped into structural dietary buckets: *Fruits, Veget
 
 For example, the *MyPlate* recommendation for fruits is about 300 calories per day for the given individual.  `RandomGut` randomly chooses 6 fruits (at 50-calorie servings) for the day's diet and includes them in the total gut contents, adding their nutrients to the total accumulated nutrient load.
 
+<img alt="rand-myplate-nutrient-growth" src="https://github.com/user-attachments/assets/f046fb41-040c-425c-9151-d03c8d959784" />
+
+*Growth of sampled nutrients in random simulation algorithm.*
 
 ## Results
 Contrary to initial expectations, this project shows that the RDA *are broadly satisfiable* on a maintenance diet.  The results also reveal interesting insights about nutritional guidelines.
@@ -130,18 +136,19 @@ It is interesting to note that the deterministic gut exhibits four phases of eat
 
 The resulting diet of this deterministic version could be considered  "Ideal Diet" in a certain sense.  
 
-> Ideal Diet png
+<img width="500" alt="ideal-diet" src="https://github.com/user-attachments/assets/6e4c98b9-7665-4200-8e80-4e470cb5b34d" />
+
 
 ### Random Gut / Human Simulation
 When running a 1,000-iteration Monte Carlo simulation of the `RandomGut` (the USDA MyPlate paradigm), the average diet achieved a median nutrient satisfaction of 1.93 (nearly double the baseline requirement across all tracked nutrients). On average, **21.6 out of 26 nutrients** were satisfied by this diet. 
 
-The diet did exhibit consistent nutritional shortfalls: 
+Unsatisfied nutrients had a mode of 4.  The diet exhibited 4 consistent nutritional shortfalls:
 - Vitamin D
 - Vitamin E
 - Calcium
 - Potassium
 
-> Satisfaction rates png
+<img alt="random-gut-results" src="https://github.com/user-attachments/assets/4e66a8c3-bffd-44bd-a4d3-360046260c6b" />
 
 ## Why This Project is Unique
 
